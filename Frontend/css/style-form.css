@@ -1,0 +1,194 @@
+/* ==== ESTILOS GENERALES ==== */
+/* ==== BASE GENERAL ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* ==== CANVAS DE PARTÍCULAS ==== */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: radial-gradient(circle at 20% 20%, #090909, #000);
+}
+
+/* ==== BOTÓN DE TEMA ==== */
+#toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ffc3;
+  color: #00ffc3;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+#toggle-theme:hover {
+  background: #00ffc3;
+  color: #000;
+}
+
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.container {
+  position: relative;
+  width: 850px;
+  height: 500px;
+  background: rgba(25, 25, 25, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00ffc3;
+  overflow: hidden;
+  display: flex;
+  z-index: 2;
+}
+
+/* ==== FORMULARIOS ==== */
+.form-container {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-container form {
+  width: 80%;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #00ffc3;
+  text-shadow: 0 0 10px #00ffc3;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #00ffc3;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #00ffc3;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00cc99;
+}
+
+/* ==== OVERLAY ==== */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg, #00ffc3, #0077ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #000;
+  text-align: center;
+  transition: all 0.6s ease-in-out;
+  z-index: 1;
+}
+
+.overlay-container h2 {
+  color: #000;
+}
+
+.overlay-container button {
+  background: #000;
+  color: #00ffc3;
+  border: 2px solid #00ffc3;
+}
+
+.overlay-container button:hover {
+  background: #00ffc3;
+  color: #000;
+}
+
+/* ==== ANIMACIÓN ENTRE LOGIN / REGISTRO ==== */
+.container.registro-active .form-container {
+  left: 50%;
+}
+
+.container.registro-active .overlay-container {
+  left: 0;
+}
+
+/* ==== MODO CLARO ==== */
+body.light-mode {
+  color: #000;
+}
+
+body.light-mode #particles {
+  background: radial-gradient(circle at 20% 20%, #e0e0e0, #bbb);
+}
+
+body.light-mode .container {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 25px #0077ff;
+}
+
+body.light-mode h2 {
+  color: #0077ff;
+  text-shadow: 0 0 10px #0077ff;
+}
+
+body.light-mode input {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+
+body.light-mode #toggle-theme {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: #0077ff;
+  color: #0077ff;
+}

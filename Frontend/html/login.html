@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login & Registro - Mundo JuegoHome</title>
+        <link rel="stylesheet" href="/Mundo Juego/Frontend/css/style-form.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+   <!-- 🎮 Lienzo para partículas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Botón de modo oscuro / claro -->
+  <button id="toggle-theme" title="Cambiar tema">🌙</button>
+
+  <div class="container" id="container">
+    <!-- LOGIN -->
+    <div class="form-container" id="login-form">
+      <form>
+        <h2>Iniciar Sesión</h2>
+        <input type="text" placeholder="Usuario o Email" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+
+    <!-- REGISTRO -->
+    <div class="form-container" id="register-form">
+      <form>
+        <h2>Crear Cuenta</h2>
+        <input type="text" placeholder="Usuario" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay-container" id="overlay">
+      <div id="overlay-content">
+        <h2>¿Nuevo en MundoJuego?</h2>
+        <p>Únete a la comunidad gamer más épica del planeta 🌌</p>
+        <button id="registrarse">Registrarse</button>
+        <br>
+        <h2>¿Ya tienes cuenta?</h2>
+        <p>Vuelve a tu zona gamer y continúa tu aventura 🎮</p>
+        <button id="iniciar">Iniciar Sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/Mundo Juego/Frontend/js/login-registro.js"></script>
+</body>
+</html>
